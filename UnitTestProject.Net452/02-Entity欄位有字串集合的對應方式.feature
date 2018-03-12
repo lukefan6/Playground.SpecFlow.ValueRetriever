@@ -1,14 +1,13 @@
-﻿Feature: CommaSeparatedValueMapping
+﻿Feature: 02-Entity欄位有字串集合的對應方式
 
-Scenario: Map comma separated string to IEnumerable<string>
-	When I map following table to a set of shipping info
+Scenario: 02-Entity欄位有字串集合的對應方式
+	Given 把以下表格的資料存到 ShippingInfo.VirtualDb 裡面
 	| ShipCode    | ZipCode | SupplierId | CreatedTime | OrderNumbers                                    |
 	| 00000000001 | 200     | 551        | 2017-12-12  | RM0000000000001                                 |
 	| 00000000002 | 200     | 551        | 2017-12-12  | RM0000000000002,RM0000000000003                 |
 	| 00000000003 | 200     | 551        | 2017-12-12  | RM0000000000001,RM0000000000002,RM0000000000003 |
 	| 00000000004 | 200     | 551        | 2017-12-12  | RM0000000000004                                 |
-	Then the order numbers for ship code "00000000003" should be
-	| value           |
-	| RM0000000000001 |
-	| RM0000000000002 |
-	| RM0000000000003 |
+	When 取得貨運單號為 "00000000003" 的訂單編號清單
+	Then 第 0 筆訂單編號是 "RM0000000000001"
+	And 第 1 筆訂單編號是 "RM0000000000002"
+	And 第 2 筆訂單編號是 "RM0000000000003"

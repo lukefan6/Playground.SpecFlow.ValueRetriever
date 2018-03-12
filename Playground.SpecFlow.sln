@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{02BC4E99-BBAC-4EED-9CE0-7FE335BFE1F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductionCode", "ClassLibrary\ProductionCode.csproj", "{02BC4E99-BBAC-4EED-9CE0-7FE335BFE1F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject.Net452", "UnitTestProject.Net452\UnitTestProject.Net452.csproj", "{964EA4FD-72EE-42F5-AC06-0AA56DBF1A4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTests", "UnitTestProject.Net452\SpecFlowTests.csproj", "{964EA4FD-72EE-42F5-AC06-0AA56DBF1A4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

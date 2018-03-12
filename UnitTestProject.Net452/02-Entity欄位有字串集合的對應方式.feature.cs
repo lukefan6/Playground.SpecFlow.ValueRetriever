@@ -18,14 +18,14 @@ namespace UnitTestProject.Net452
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CommaSeparatedValueMappingFeature
+    public partial class _02_Entity欄位有字串集合的對應方式Feature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "CommaSeparatedValueMapping.feature"
+#line 1 "02-Entity欄位有字串集合的對應方式.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -44,7 +44,7 @@ namespace UnitTestProject.Net452
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CommaSeparatedValueMapping", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "02-Entity欄位有字串集合的對應方式", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace UnitTestProject.Net452
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "CommaSeparatedValueMapping")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "02-Entity欄位有字串集合的對應方式")))
             {
-                global::UnitTestProject.Net452.CommaSeparatedValueMappingFeature.FeatureSetup(null);
+                global::UnitTestProject.Net452._02_Entity欄位有字串集合的對應方式Feature.FeatureSetup(null);
             }
         }
         
@@ -83,11 +83,11 @@ namespace UnitTestProject.Net452
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Map comma separated string to IEnumerable<string>")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommaSeparatedValueMapping")]
-        public virtual void MapCommaSeparatedStringToIEnumerableString()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("02-Entity欄位有字串集合的對應方式")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "02-Entity欄位有字串集合的對應方式")]
+        public virtual void _02_Entity欄位有字串集合的對應方式()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Map comma separated string to IEnumerable<string>", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02-Entity欄位有字串集合的對應方式", ((string[])(null)));
 #line 3
 this.ScenarioSetup(scenarioInfo);
 #line hidden
@@ -122,18 +122,15 @@ this.ScenarioSetup(scenarioInfo);
                         "2017-12-12",
                         "RM0000000000004"});
 #line 4
- testRunner.When("I map following table to a set of shipping info", ((string)(null)), table1, "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "value"});
-            table2.AddRow(new string[] {
-                        "RM0000000000001"});
-            table2.AddRow(new string[] {
-                        "RM0000000000002"});
-            table2.AddRow(new string[] {
-                        "RM0000000000003"});
+ testRunner.Given("把以下表格的資料存到 ShippingInfo.VirtualDb 裡面", ((string)(null)), table1, "Given ");
 #line 10
- testRunner.Then("the order numbers for ship code \"00000000003\" should be", ((string)(null)), table2, "Then ");
+ testRunner.When("取得貨運單號為 \"00000000003\" 的訂單編號清單", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+ testRunner.Then("第 0 筆訂單編號是 \"RM0000000000001\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.And("第 1 筆訂單編號是 \"RM0000000000002\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.And("第 2 筆訂單編號是 \"RM0000000000003\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

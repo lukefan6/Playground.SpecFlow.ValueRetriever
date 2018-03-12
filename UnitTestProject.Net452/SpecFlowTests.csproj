@@ -62,26 +62,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommaSeparatedValueMapping.feature.cs">
+    <Compile Include="01-簡化Step參數的對應.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CommaSeparatedValueMapping.feature</DependentUpon>
+      <DependentUpon>01-簡化Step參數的對應.feature</DependentUpon>
+    </Compile>
+    <Compile Include="02-Entity欄位有字串集合的對應方式.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>02-Entity欄位有字串集合的對應方式.feature</DependentUpon>
+    </Compile>
+    <Compile Include="03-指定字串欄位的值為null.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>03-指定字串欄位的值為null.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StepDefinitions.cs" />
+    <Compile Include="Steps_01_簡化參數的對應.cs" />
+    <Compile Include="Steps_02_Entity欄位有字串集合的對應方式.cs" />
+    <Compile Include="Steps_03_指定字串欄位的值為Null.cs" />
+    <Compile Include="ValueRetrievers\_02_OrderNumbersRetriever.cs" />
+    <Compile Include="ValueRetrievers\_03_NullStringRetriever.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="CommaSeparatedValueMapping.feature">
+    <None Include="01-簡化Step參數的對應.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CommaSeparatedValueMapping.feature.cs</LastGenOutput>
+      <LastGenOutput>01-簡化Step參數的對應.feature.cs</LastGenOutput>
     </None>
-    <None Include="packages.config" />
+    <None Include="02-Entity欄位有字串集合的對應方式.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>02-Entity欄位有字串集合的對應方式.feature.cs</LastGenOutput>
+    </None>
+    <None Include="03-指定字串欄位的值為null.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>03-指定字串欄位的值為null.feature.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+    <ProjectReference Include="..\ClassLibrary\ProductionCode.csproj">
       <Project>{02bc4e99-bbac-4eed-9ce0-7fe335bfe1f0}</Project>
-      <Name>ClassLibrary</Name>
+      <Name>ProductionCode</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
